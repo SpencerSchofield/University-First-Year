@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box{
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 12;
+  padding: 15px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 69px;
+  text-align: center;
+}
+
+</style>
+
+
+</head>
+
+
+<body onLoad="boxCreation();">
+
+
+<div class = "box" id="box0" onClick="addChar(0)"></div>
+<div class = "box" id="box1" onClick="addChar(1)"></div>
+<div class = "box" id="box2" onClick="addChar(2)"></div>
+<div class = "box" id="box3" onClick="addChar(3)"></div>
+<div class = "box" id="box4" onClick="addChar(4)"></div>
+<div class = "box" id="box5" onClick="addChar(5)"></div>
+<div class = "box" id="box6" onClick="addChar(6)"></div>
+<div class = "box" id="box7" onClick="addChar(7)"></div>
+<div class = "box" id="box8" onClick="addChar(8)"></div>
+
+
+<script>
+var player = "x";
+var finished = false;
+
+var occupied0 = false;
+var occupied1 = false;
+var occupied2 = false;
+var occupied3 = false;
+var occupied4 = false;
+var occupied5 = false;
+var occupied6 = false;
+var occupied7 = false;
+var occupied8 = false;
+
+function boxCreation(){	
+	for (var x = 0; x < 9; x++){
+		box3.style.clear = "left";
+		box6.style.clear = "left";
+	}
+}
+function addChar(number){
+	var boxHold = document.getElementById("box" + number);
+	if (number == 0 && !occupied0) {
+	occupied0 = true;
+	box0.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 1 && !occupied1) {
+	occupied1 = true;
+	box1.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 2 && !occupied2) {
+	occupied2 = true;
+	box2.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 3 && !occupied3) {
+	occupied3 = true;
+	box3.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 4 && !occupied4) {
+	occupied4 = true;
+	box4.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 5 && !occupied5) {
+	occupied5 = true;
+	box5.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 6 && !occupied6) {
+	occupied6 = true;
+	box6.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 7 && !occupied7) {
+	occupied7 = true;
+	box7.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	else if (number == 8 && !occupied8) {
+	occupied8 = true;
+	box8.innerText = player;
+	player == "o" ? player = "x" : player = "o";
+	}
+	checkWin()
+	
+}
+
+ function checkWin (){
+ if (box0.innerText == "x" && box1.innerText == "x" && box2.innerText == "x")
+{
+ box0.style.backgroundColor = "yellow";
+  box1.style.backgroundColor = "yellow";
+   box2.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box0.innerText == "o" && box1.innerText == "o" && box2.innerText == "o")
+{
+ box0.style.backgroundColor = "yellow";
+  box1.style.backgroundColor = "yellow";
+   box2.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+   
+}
+ else if (box3.innerText == "x" && box4.innerText == "x" && box5.innerText == "x")
+{
+ box3.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box5.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box3.innerText == "o" && box4.innerText == "o" && box5.innerText == "o")
+{
+ box3.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box5.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+ else if (box6.innerText == "x" && box7.innerText == "x" && box8.innerText == "x")
+{
+ box6.style.backgroundColor = "yellow";
+  box7.style.backgroundColor = "yellow";
+   box8.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box6.innerText == "o" && box7.innerText == "o" && box8.innerText == "o")
+{
+ box6.style.backgroundColor = "yellow";
+  box7.style.backgroundColor = "yellow";
+   box8.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+ else if (box0.innerText == "x" && box4.innerText == "x" && box8.innerText == "x")
+{
+ box0.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box8.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box0.innerText == "o" && box4.innerText == "o" && box8.innerText == "o")
+{
+ box0.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box8.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+ else if (box2.innerText == "x" && box4.innerText == "x" && box6.innerText == "x")
+{
+ box2.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box6.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box2.innerText == "o" && box4.innerText == "o" && box6.innerText == "o")
+{
+ box2.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box6.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+ else if (box0.innerText == "x" && box3.innerText == "x" && box6.innerText == "x")
+{
+ box0.style.backgroundColor = "yellow";
+  box3.style.backgroundColor = "yellow";
+   box6.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box0.innerText == "o" && box3.innerText == "o" && box6.innerText == "o")
+{
+ box0.style.backgroundColor = "yellow";
+  box3.style.backgroundColor = "yellow";
+   box6.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+ else if (box1.innerText == "x" && box4.innerText == "x" && box7.innerText == "x")
+{
+ box1.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box7.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box1.innerText == "o" && box4.innerText == "o" && box7.innerText == "o")
+{
+ box1.style.backgroundColor = "yellow";
+  box4.style.backgroundColor = "yellow";
+   box7.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+ else if (box2.innerText == "x" && box5.innerText == "x" && box8.innerText == "x")
+{
+ box2.style.backgroundColor = "yellow";
+  box5.style.backgroundColor = "yellow";
+   box8.style.backgroundColor = "yellow";
+   alert("Player X Wins");
+   location.reload();
+}
+ else if (box2.innerText == "o" && box5.innerText == "o" && box8.innerText == "o")
+{
+ box2.style.backgroundColor = "yellow";
+  box5.style.backgroundColor = "yellow";
+   box8.style.backgroundColor = "yellow";
+   alert("Player O Wins");
+   location.reload();
+}
+else if (occupied0 == true && occupied1 == true && occupied2 == true && occupied3 == true && occupied4 == true && occupied5 == true && occupied6 == true && occupied7 == true && occupied8 == true){
+	alert("Both Players X and O Drew");
+	location.reload();
+}
+}
+
+</script>
+
+
+</body>
+</html>

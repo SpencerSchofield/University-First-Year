@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head id="header">
+<style>
+
+.square {
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding: 15px;
+}
+
+</style>
+</head>
+
+<body>
+<form id="boxForm">
+How many Boxes do you want?:
+<input type="number" name="myForm"></input>
+
+<button type="button" id="submitButton" onClick="setUp();">Submit</button>
+
+</form>
+<div id="container"></div>
+
+<script>
+
+function makeColor() {
+    var r = Math.round(Math.random() * 255);
+	var g = Math.round(Math.random() * 255);
+	var b = Math.round(Math.random() * 255);
+	var colors = "rgb(" + r + "," + g + "," + b + ")";
+	 return colors;
+	}
+
+function setUp() {
+var formage = document.getElementById("boxForm").elements["myForm"];
+var margin = 5;
+	var container = document.getElementById("container");
+	while (container.children.length > 0) {
+		container.removeChild(container.firstElementChild);
+	}
+	
+	for (var x = 0; x < formage.value; x++){
+	var box = document.createElement("div");
+	box.setAttribute("class", "square");
+	box.style.backgroundColor = makeColor();
+	box.style.marginLeft = margin + "px";
+	margin = margin * 2;
+	var please = document.getElementById("container");
+	please.appendChild(box);
+	}
+}
+</script>
+
+
+
+
+</html>

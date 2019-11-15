@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,td {
+	border: 1px solid black;
+	}
+	table tr:nth-child(even) {background-color: blue}
+	table tr:nth-child(odd) {background-color: green}
+
+
+
+</style>
+
+<body>
+<form id="myForm">
+Insert Name: <input type="text" id="username">
+Select your Date of Birth: <input type="date" id="DoB">
+Pick your Eye Colour<select id="eyes">
+	<option value =""></option>
+	<option value ="Brown">Brown</option>
+	<option value ="Blue">Blue</option>
+	<option value ="Grey">Grey</option>
+	<option value ="Green">Green</option>
+	<option value ="Other">Other</option>
+</select>
+<div>
+  <input type="reset" value="Reset">
+  </div>
+</form>
+
+
+<button onclick="display()">Display</button>
+<p id="name"></p>
+
+<script>
+var rowCount = 0;
+function display() {
+  var x = document.getElementById("username").value;
+  var y = document.getElementById("DoB").value;
+  var z = document.getElementById("eyes").value;
+  let row = table.insertRow(-1);1
+  let cell = [row.insertCell(),row.insertCell(),row.insertCell(),row.insertCell()];
+  cell[0].innerHTML = x, cell[1].innerHTML = y, cell[2].innerHTML = z;
+  cell[3].innerHTML = "<input id='ButtonD' type='button' onclick='parentNode.parentNode.remove(); rowD()' value='Delete'></input>"
+  document.getElementById("myForm").reset();
+  rowCount = rowCount + 1;
+  document.getElementById("caption").innerHTML = rowCount;
+}
+function rowD(){
+ rowCount = rowCount - 1;
+ document.getElementById("caption").innerHTML = rowCount;
+}
+
+</script>
+
+
+
+<table id="table">
+<caption id="caption"> </caption>
+<tr>
+	<th> Name </th>
+	<th> DoB </th>
+	<th> Eye Colour </th>
+</tr>
+</table>
+
+</body>
+</html>

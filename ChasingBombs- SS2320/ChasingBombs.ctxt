@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=ChasingBombs
+comment0.text=\r\n\ ChasingBombs\ is\ a\ game\ where\ the\ player\ needs\ to\ the\ tile\ which\ the\ bomb\ is\ hidden\ under.\r\n\ There\ are\ three\ difficulties\ to\ play\ on\:\ Easy,\ Intermediate\ and\ Difficult.\r\n\r\n\ @author\ (Spencer\ Schofield\ ss2320)\r\n\ @version\ (19/3/2019)\r\n
+comment1.params=
+comment1.target=ChasingBombs()
+comment1.text=\r\n\ The\ Constructor\ for\ ChasingBombs\r\n\ Sets\ the\ frame's\ size,\ visiability,\ layout\ and\ runs\ the\ makeFrame\ method.\r\n
+comment2.params=
+comment2.target=void\ makeFrame()
+comment2.text=\r\n\ MakeFrame\ method\ makes\ and\ displays\ the\ game.\r\n
+comment3.params=e
+comment3.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=e
+comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment6.params=e
+comment6.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment7.params=e
+comment7.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment8.params=e
+comment8.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment9.params=
+comment9.target=void\ gameReset()
+comment9.text=\r\n\ gameReset\ method\ is\ called\ when\ the\ game\ finishes,\ or\ the\ player\ resets\ the\ game\ \r\n\ or\ when\ the\ player\ changes\ the\ difficulty.\r\n
+numComments=10
