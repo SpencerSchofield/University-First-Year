@@ -1,12 +1,6 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
-PROJECT TITLE:
-PURPOSE OF PROJECT:
+PROJECT TITLE: Chasing Bombs
+PURPOSE OF PROJECT: Assignment to test and try JFrame, JPanels and Event Listeners
 VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
+HOW TO START THIS PROJECT: Run package.bluej then make a new instance of ChasingBombs.
+AUTHORS: Spencer Schofield
 USER INSTRUCTIONS:
